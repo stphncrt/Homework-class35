@@ -16,36 +16,39 @@ Complete the function called `sanitizeFruitBasket`:
 - Return a new array that contains the fruits without any lemons.
 ------------------------------------------------------------------------------*/
 const fruitBasket = [
-  'apple',
-  'lemon',
-  'grapefruit',
-  'lemon',
-  'banana',
-  'watermelon',
-  'lemon',
+    'apple',
+    'lemon',
+    'grapefruit',
+    'lemon',
+    'banana',
+    'watermelon',
+    'lemon',
 ];
 
 // ! Function under test
-function sanitizeFruitBasket(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+function sanitizeFruitBasket(basket, fruit) {
+    const newBasket = [...basket];
+    const sanitizedBasket = newBasket.filter((item) => item !== fruit);
+    return sanitizedBasket;
 }
 
 // ! Unit tests (using Jest)
 describe('sanitizeFruitBasket', () => {
-  test('should take two parameters', () => {
-    // TODO replace next line with your code
-    expect(false).toBe(true);
-  });
+    test('should take two parameters', () => {
+        expect(sanitizeFruitBasket).toHaveLength(2);
 
-  test('should not modify the original `fruitBasket` array', () => {
-    // Save the original contents of the fruit basket
-    const originalFruitBasketContents = [...fruitBasket];
-    // TODO replace next line with your code
-    expect(false).toBe(true);
-  });
+    });
 
-  test('should return a new array that does not include the unwanted `lemon`', () => {
-    // TODO replace next line with your code
-    expect(false).toBe(true);
-  });
+    test('should not modify the original `fruitBasket` array', () => {
+        // Save the original contents of the fruit basket
+        const originalFruitBasketContents = [...fruitBasket];
+        expect(originalFruitBasketContents).toEqual(fruitBasket);
+
+    });
+
+    test('should return a new array that does not include the unwanted `lemon`', () => {
+        const actual = sanitizeFruitBasket(fruitBasket, 'lemon')
+        const fruitList = ["apple", "grapefruit", "banana", "watermelon"];
+        expect(actual).toEqual(fruitList);
+    });
 });
