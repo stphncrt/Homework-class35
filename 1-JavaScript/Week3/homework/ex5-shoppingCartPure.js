@@ -22,7 +22,8 @@ function addToShoppingCart(groceryArray, item) {
         newShoppingCart.push(item);
         newShoppingCart.length > 3 ? newShoppingCart.shift() : null;
         return newShoppingCart;
-    } else return newShoppingCart;
+    }
+    return newShoppingCart;
 
 }
 
