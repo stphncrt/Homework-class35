@@ -20,7 +20,7 @@ you have more than 3 items in your shopping cart the first item gets taken out.
 
 3. Confirm that your code passes the unit tests.
 -----------------------------------------------------------------------------*/
-cconst shoppingCart = ['bananas', 'milk'];
+const shoppingCart = ['bananas', 'milk'];
 
 // ! Function to be tested
 function addToShoppingCart( /* parameters go here */ ) {
