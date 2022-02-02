@@ -1,4 +1,7 @@
 'use strict';
+
+
+
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Browsers/Week1#exercise-5-the-cat-walk
 
@@ -22,39 +25,35 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
 
+let left = 0;
+
 function catWalk() {
     const cat = document.getElementById('image');
     cat.style.left = '0px';
-    let left = 0;
-    const screenWidth = window.innerWidth;
-    console.log(screenWidth)
 
-    setInterval(() => {
-        if (left <= (screenWidth / 2)) {
-            left += 10;
-            cat.style.left = `${left}px`
-        }
-        if (left === (screenWidth / 2)) {
-            cat.style.display = 'none';
-            const dancingCat = document.createElement('img');
-            dancingCat.src = 'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
-            document.body.appendChild(dancingCat);
-            dancingCat.style.left = `${(screenWidth / 2)}px`;
-            dancingCat.style.display = 'block';
-            setTimeout(() => {
-                dancingCat.style.display = 'none';
-                setInterval(() => {
-                    if (left > (screenWidth / 2) && left < screenWidth) {
-                        if (left > (screenWidth - 100)) {
-                            left = 0;
-                        }
-                        cat.style.display = 'block';
-                        left += 10;
-                        cat.style.left = `${left}px`
-                    }
-                }, 50)
-            }, 5000)
-        }
-    }, 50)
+    const viewPort = window.innerWidth;
+    const screenWidth = Math.ceil(viewPort / 10) * 10;
+    const middleOfScreen = (screenWidth / 2);
+
+    const stepForward = () => {
+        left += 10;
+        cat.style.left = `${left}px`;
+    }
+    if (left === screenWidth) {
+        left = 0;
+    } else if (left === middleOfScreen) {
+        clearInterval(walkInterval);
+        cat.src = 'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+        cat.style.left = `${middleOfScreen}px`;
+        setTimeout(() => {
+            cat.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+            stepForward();
+            walkInterval = setInterval(catWalk, 50);
+        }, 5000)
+    } else {
+        stepForward();
+    }
 }
+let walkInterval = setInterval(catWalk, 50);
+
 window.addEventListener('load', catWalk);
