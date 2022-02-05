@@ -10,21 +10,8 @@ function addCurrentTime() {
     const currentTimeElement = document.createElement('h1');
 
     setInterval(() => {
-        const now = new Date();
-        let hour = now.getHours();
-        if (hour.toString().length === 1) {
-            hour = '0' + hour;
-        }
-        let minutes = now.getMinutes();
-        if (minutes.toString().length === 1) {
-            minutes = '0' + minutes;
-        }
-        let seconds = now.getSeconds();
-        if (seconds.toString().length === 1) {
-            seconds = '0' + seconds;
-        }
-        const currentTime = hour + ":" + minutes + ":" + seconds;
-        currentTimeElement.textContent = currentTime;
+        const now = new Date().toLocaleTimeString();
+        currentTimeElement.textContent = now;
     })
     document.body.appendChild(currentTimeElement);
 }

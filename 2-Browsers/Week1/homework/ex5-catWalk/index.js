@@ -1,9 +1,7 @@
 'use strict';
-
-
-
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Browsers/Week1#exercise-5-the-cat-walk
+
 1. Create a variable to store a reference to the `<img>` element.
 2. Change the style of the `<img>` to have a `left` of `0px`, so that it starts 
    at the left hand of the screen.
@@ -18,10 +16,11 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
    of a cat dancing (use this URL given below), keep it dancing for 5 seconds, 
    and then replace the img with the original image and have it 
    continue the walk.
+
    Dancing cat URL:
+
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
-
 let left = 0;
 
 function catWalk() {
@@ -52,5 +51,4 @@ function catWalk() {
     }
 }
 let walkInterval = setInterval(catWalk, 50);
-
 window.addEventListener('load', catWalk);
