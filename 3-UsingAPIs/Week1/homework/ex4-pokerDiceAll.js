@@ -32,6 +32,9 @@ function rollDice() {
     return Promise.all(promises)
 }
 
+//Above lines I create a function that creates an array(promises) for storing all promises.
+//Calling 'Promise.all' gives me 'reject' but also keeps running other promises.
+
 function main() {
     rollDice()
         .then((results) => console.log('Resolved!', results))

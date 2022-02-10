@@ -44,11 +44,11 @@ function rollDie() {
 
 }
 
-
 function main() {
     rollDie().then((message) => console.log(message)).catch((error) => console.log(error.message))
 }
-
+// Using Promise structure, all if statements falls under two categories namely 'resolve', 'reject'.
+// By doing so, cause of the problem disappears. We have two clear options then. 
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
