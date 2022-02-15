@@ -18,13 +18,11 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
    should result in a network (DNS) error.
 ------------------------------------------------------------------------------*/
 async function requestData(url) {
-    try {
-        const response = await fetch(url);
-        const data = response.json();
-        return data
-    } catch {
-        return;
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error('Could not Fetch');
     }
+    return response.json();
 }
 
 function renderImage(data) {

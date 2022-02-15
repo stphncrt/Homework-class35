@@ -3,3 +3,76 @@
 2022-02-14 09:18:20 info: ---------------------------------------------
 2022-02-14 09:18:28 info: All unit tests passed.
 2022-02-14 09:18:32 info: All steps were completed successfully
+2022-02-14 11:04:07 info: ---------------------------------------------
+2022-02-14 11:04:07 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2022-02-14 11:04:07 info: ---------------------------------------------
+2022-02-14 11:04:15 info: All unit tests passed.
+2022-02-14 11:04:20 error: *** Spell Checker Report ***
+
+ex1-programmerFun/index.js:24:26 - Unknown word (Couldnt)
+
+2022-02-14 11:04:44 info: ---------------------------------------------
+2022-02-14 11:04:44 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2022-02-14 11:04:44 info: ---------------------------------------------
+2022-02-14 11:04:52 info: All unit tests passed.
+2022-02-14 11:04:57 info: All steps were completed successfully
+2022-02-15 12:29:32 info: ------------------------------------------
+2022-02-15 12:29:32 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-02-15 12:29:32 info: ------------------------------------------
+2022-02-15 12:29:54 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-pokemonApp.test.js --colors
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js (12.132 s)
+  pokemonApp
+    √ HTML should be syntactically valid (115 ms)
+    √ should have all TODO comments removed
+    √ should use `fetch()`
+    √ should use `await fetch()` (1 ms)
+    × should use try/catch (1 ms)
+
+  ● pokemonApp › should use try/catch
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      51 |
+      52 |   test('should use try/catch', () => {
+    > 53 |     expect(state.tryCatch).toBeDefined();
+         |                            ^
+      54 |   });
+      55 | });
+      56 |
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex2-pokemonApp.test.js:53:28)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        12.711 s
+Ran all test suites matching /ex2-pokemonApp.test.js/i.
+2022-02-15 12:30:05 error: *** Spell Checker Report ***
+
+ex2-pokemonApp/index.js:73:40 - Unknown word (Pekomon)
+
+2022-02-15 12:34:10 info: ------------------------------------------
+2022-02-15 12:34:10 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-02-15 12:34:10 info: ------------------------------------------
+2022-02-15 12:34:15 info: All unit tests passed.
+2022-02-15 12:34:18 error: *** Spell Checker Report ***
+
+ex2-pokemonApp/index.js:75:40 - Unknown word (Pekomon)
+
+2022-02-15 12:34:47 info: ------------------------------------------
+2022-02-15 12:34:47 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-02-15 12:34:47 info: ------------------------------------------
+2022-02-15 12:34:52 info: All unit tests passed.
+2022-02-15 12:34:54 error: *** Spell Checker Report ***
+
+ex2-pokemonApp/index.js:75:40 - Unknown word (Pekomon)
+
+2022-02-15 12:35:25 info: ------------------------------------------
+2022-02-15 12:35:25 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-02-15 12:35:25 info: ------------------------------------------
+2022-02-15 12:35:30 info: All unit tests passed.
+2022-02-15 12:35:33 info: All steps were completed successfully
