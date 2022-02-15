@@ -91,3 +91,8 @@ ex2-pokemonApp/index.js:75:40 - Unknown word (Pekomon)
 2022-02-15 05:11:08 info: ----------------------------------------
 2022-02-15 05:11:08 warn: A unit test file was not provided.
 2022-02-15 05:11:25 info: All steps were completed successfully
+2022-02-15 05:44:29 info: --------------------------------------------
+2022-02-15 05:44:29 info: >>> Running Unit Test `ex6-browserDebug` <<<
+2022-02-15 05:44:29 info: --------------------------------------------
+2022-02-15 05:44:29 warn: A unit test file was not provided.
+2022-02-15 05:44:33 info: All steps were completed successfully
