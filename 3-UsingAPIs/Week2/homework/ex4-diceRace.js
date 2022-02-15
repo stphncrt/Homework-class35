@@ -14,19 +14,26 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
-  const dice = [1, 2, 3, 4, 5];
-  // TODO complete this function; use Promise.race() and rollDie()
+    const dice = [1, 2, 3, 4, 5];
+    const promiseAll = dice.map(rollDie);
+    return Promise.race(promiseAll);
 }
 
 // Refactor this function to use async/await and try/catch
-function main() {
-  rollDice()
-    .then((results) => console.log('Resolved!', results))
-    .catch((error) => console.log('Rejected!', error.message));
+async function main() {
+    try {
+        const result = await rollDice()
+        console.log('Resolved!', result)
+    } catch (error) {
+        console.log('Rejected!', error.message)
+    }
 }
+// we are passing as argument an array of promises that are already resolved,
+// to trigger Promise.race as soon as possible.
+// but that doesn't prevent other promises to resolve or reject
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
-  main();
+    main();
 }
 module.exports = rollDice;

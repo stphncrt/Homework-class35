@@ -81,3 +81,8 @@ ex2-pokemonApp/index.js:75:40 - Unknown word (Pekomon)
 2022-02-15 01:14:12 info: -----------------------------------------
 2022-02-15 01:14:15 info: All unit tests passed.
 2022-02-15 01:14:17 info: All steps were completed successfully
+2022-02-15 01:35:24 info: ----------------------------------------
+2022-02-15 01:35:24 info: >>> Running Unit Test `ex4-diceRace` <<<
+2022-02-15 01:35:24 info: ----------------------------------------
+2022-02-15 01:35:26 info: All unit tests passed.
+2022-02-15 01:35:29 info: All steps were completed successfully
